@@ -1,4 +1,5 @@
  class ArrayList<T>
+ 
 {
     T data;
 
