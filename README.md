@@ -23,8 +23,20 @@
         size--;
         //clean up
         data[size] = null;
-        //finally return saved element from ln 28
+        //resize array if needed
+        if (data.length > INITIAL_CAPACITY && size < data.length / 4) {
+            resize(data.length / 2);
+        }
+        //finally return saved element
         return removedElement;
+    } 
+    //helper method to resize underlying array
+    private void resize(int newCapacity) {
+        T[] newData = (T[]) new Object[newCapacity];
+        for (int i = 0; i < size; i++) {
+            newData[i] = data[i];
+        }
+        data = newData;
     }
     public  T get()
     {
