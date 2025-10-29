@@ -10,6 +10,22 @@ public class ArrayList<T> {
         this.size = 0;
     }
     // add/get methods
+    public void add(T element) {
+            if (size >= data.length) {
+                resize();
+            }
+            data[size] = element;
+            size++;
+            //System.out.println(element);
+        }
+
+        public void resize() {
+            T[] newData = (T[]) new Object[data.length * 2];
+            for (int i = 0; i < data.length; i++) {
+                newData[i] = data[i];
+            }
+            data = newData;
+        }
     //returns # of elements in list
     public int size() {
         return this.size;
@@ -37,4 +53,5 @@ public class ArrayList<T> {
         //finally return saved element from ln 28
         return removedElement;
     }
+
 }
