@@ -2,6 +2,7 @@
  
 {
     T data;
+    int size = 0;
 
     public void add()
     {
@@ -30,6 +31,7 @@
     }
     public int size()
     {
+      return size;
     }
     
 }
