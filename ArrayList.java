@@ -29,6 +29,15 @@ public class ArrayList<T> {
     public int size() {
         return this.size;
     }
+
+    // get method
+    public T get(int index) {
+    	if (index < 0 || index >= size) {
+    		throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);	
+    	}
+    	return data[index];
+    }
+    
     /**
      *removes element at given point
      *shifts any previous elements to the left
@@ -53,4 +62,5 @@ public class ArrayList<T> {
     }
 
 }
+
 
