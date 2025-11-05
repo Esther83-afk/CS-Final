@@ -1,7 +1,7 @@
 public class ArrayList<T> {
 
     private T[] data;
-    private int size; //# of elements
+    private int size;
     private static final int INITIAL_CAPACITY = 10;
      //constructs empty list with given capacity
     public ArrayList() {
@@ -16,7 +16,6 @@ public class ArrayList<T> {
             }
             data[size] = element;
             size++;
-            //System.out.println(element);
         }
 
         public void resize() {
@@ -50,8 +49,8 @@ public class ArrayList<T> {
         size--;
         //clean up
         data[size] = null;
-        //finally return saved element from ln 28
         return removedElement;
     }
 
 }
+
