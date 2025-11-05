@@ -23,7 +23,7 @@
         size--;
         //clean up
         data[size] = null;
-        //resize array if needed
+        //resize array if needed to save space
         if (data.length > INITIAL_CAPACITY && size < data.length / 4) {
             resize(data.length / 2);
         }
