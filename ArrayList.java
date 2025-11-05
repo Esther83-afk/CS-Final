@@ -38,10 +38,7 @@ public class ArrayList<T> {
     	return data[index];
     }
     
-    /**
-     *removes element at given point
-     *shifts any previous elements to the left
-     */
+    //remove method
     public T remove(int index) {
         //check if index is valid, and check against size.
         if (index < 0 || index >= size) {
@@ -49,9 +46,9 @@ public class ArrayList<T> {
         }
         //store removed element to return later
         T removedElement = data[index];
-        //shift elements to left, starting from removed index
+        //shift elements to left starting from removed
         for (int i = index; i < size - 1; i++) {
-            // Copy the element from the right (i + 1) into the current spot (i)
+            //copy element from right
             data[i] = data[i + 1];
         }
         //decrement size
@@ -62,5 +59,6 @@ public class ArrayList<T> {
     }
 
 }
+
 
 
