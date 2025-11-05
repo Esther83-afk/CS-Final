@@ -71,7 +71,7 @@ public T remove(int index) {
     return removedElement;
 } 
 //helper method to resize underlying array
-public resize(int newCapacity) {
+public T resize(int newCapacity) {
     T[] newData = (T[]) new Object[newCapacity];
     for (int i = 0; i < size; i++) {
         newData[i] = data[i];
@@ -80,6 +80,7 @@ public resize(int newCapacity) {
 }
 
 }
+
 
 
 
