@@ -10,13 +10,21 @@ public class ArrayList<T> {
         this.size = 0;
     }
     // add/get methods
-    public void add(T element) {
-            if (size >= data.length) {
-                resize();
-            }
-            data[size] = element;
-            size++;
+    public void add(int index, T element) {
+        if (index < 0 || index > size) {
+            throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
         }
+        if (size >= data.length) resize();
+        // Shift elements to the right
+        for (int i = size; i > index; i--) {
+            data[i] = data[i - 1];
+        }
+        data[index] = element;
+        size++;
+    }
+    public void add(T element) {
+        add(size, element);
+    }
 
         public void resize() {
             T[] newData = (T[]) new Object[data.length * 2];
@@ -72,6 +80,7 @@ private void resize(int newCapacity) {
 }
 
 }
+
 
 
 
