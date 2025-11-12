@@ -20,7 +20,7 @@ public class LinkedList <T> {
 	}
 	
 	public int size() {
-		
+		return size;
 	}
 	
 	public void add(T element) {
