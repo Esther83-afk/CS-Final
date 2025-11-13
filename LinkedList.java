@@ -76,7 +76,47 @@ public class LinkedList <T> {
 	}
 	
 	public T remove(int index) {
-		
+	if (index < 0 || index >= size) {
+        throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
+    }
+
+    T removedData;
+
+    // Case 1: Remove the head node
+    if (index == 0) {
+        removedData = head.data;
+        head = head.next;
+
+        // If list becomes empty, update tail as well
+        if (head == null) {
+            tail = null;
+        }
+
+        size--;
+        return removedData;
+    }
+
+    // Case 2: Remove from middle or end
+    Node<T> prev = head;
+
+    // Traverse to the node before the one we want to remove
+    for (int i = 0; i < index - 1; i++) {
+        prev = prev.next;
+    }
+
+    Node<T> current = prev.next;
+    removedData = current.data;
+
+    // Skip the node
+    prev.next = current.next;
+
+    // If we removed the last node, update tail
+    if (current == tail) {
+        tail = prev;
+    }
+
+    size--;
+    return removedData;	
 	}
 	
 }
