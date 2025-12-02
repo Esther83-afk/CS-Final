@@ -78,7 +78,11 @@ public void resize(int newCapacity) {
     }
     data = newData;
 }
-
+    //helper method to clear list
+    public void clear() {
+        data = (T[]) new Object[INITIAL_CAPACITY]; 
+        size = 0;
+    }
 }
 
 
