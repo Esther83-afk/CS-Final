@@ -118,5 +118,11 @@ public class LinkedList <T> {
     size--;
     return removedData;	
 	}
+	//helper method to clear list
+	public void clear() {
+	    head = null; 
+	    tail = null; 
+	    size = 0;      
+	}
 	
 }
