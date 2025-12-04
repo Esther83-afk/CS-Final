@@ -1,5 +1,3 @@
-package finalCSProject;
-
 import java.util.ArrayList;
 
 public class DriverArrayListAPIAdd {
@@ -185,3 +183,4 @@ public class DriverArrayListAPIAdd {
     }
 
 }
+
