@@ -1,4 +1,4 @@
-
+//sequential access
 
 public class SeqArrayListTest {
 
@@ -41,3 +41,4 @@ public class SeqArrayListTest {
  
     }
 }
+
