@@ -1,3 +1,4 @@
+//sequential access
 import java.util.Random;
 public class SeqLinkedListTest {
 	public static void main(String[] args)
